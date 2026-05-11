@@ -5,6 +5,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #2a7b9b;
+  background: radial-gradient(
+    circle,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(60, 153, 147, 1) 32%,
+    rgba(87, 199, 133, 1) 64%,
+    rgba(237, 221, 83, 1) 100%
+  );
 }
 
 /* Body */
@@ -15,14 +23,15 @@ body {
   justify-content: space-between;
 }
 
-main#principal, header#cabecalho {
+main#principal,
+header#cabecalho {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 /* Header */
-header#cabecalho div.container{
+header#cabecalho div.container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,4 +83,3 @@ section.cards-highlight article.card img {
   height: auto;
   border-radius: 10px;
 }
-
