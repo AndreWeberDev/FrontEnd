@@ -58,22 +58,23 @@ nav.menu ul {
   gap: 1.5rem;
   align-items: center;
 
-section.title {
-  display: none;
-}
+  section.title {
+    display: none;
+  }
 
-div.container {
-  width: 80%;
-}
+  div.container {
+    width: 80%;
+  }
 
-section.cards-highlight {
-  display: flex;
-  justify-content: space-between;
-  margin: 150px 0;
-}
+  section.cards-highlight {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 0;
+  }
 
-section.cards-highlight article.card img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
+  section.cards-highlight article.card img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
 }
