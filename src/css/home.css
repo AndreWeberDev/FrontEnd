@@ -176,6 +176,28 @@ body {
   margin-top: 10px;
 }
 
+/* Efeito "caminho meio andando" (zigzag alternado) */
+.card-jogos a .jogo,
+.card-jogos > .jogo-breve,
+.card-jogos .jogo {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.path-left {
+  transform: translateX(-6%) rotate(-1.5deg);
+}
+
+.path-right {
+  transform: translateX(6%) rotate(1.5deg);
+}
+
+.path-left:hover,
+.path-right:hover,
+.card-jogos a:hover .jogo {
+  transform: translateY(-8px) translateX(0) rotate(0);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.18);
+}
+
 /* Cards Highlights - Seção de destaque */
 .cards-highlights {
   display: grid;

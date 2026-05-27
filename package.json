@@ -1,0 +1,18 @@
+{
+  "name": "projeto-arcade365-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "jsonwebtoken": "^9.0.0",
+    "sqlite3": "^5.1.6",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "helmet": "^7.0.0"
+  }
+}
