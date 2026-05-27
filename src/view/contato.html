@@ -3,72 +3,85 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="description"
-    content="Somente um site informativo para mostrar a importância do HTML para a construção de páginas web." />
-  <meta name="keywords" content="HTML, site, página web, desenvolvimento web" />
+  <meta name="description" content="Entre em contato com o Arcade365 para sugestões e dúvidas." />
+  <meta name="keywords" content="Contato, Arcade365, Sugestões, Feedback" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato - Arcade365</title>
-  <link rel="shortcut icon" href="../../assets/img/logoSemBG02.png" type="image/x-icon" />
-
-  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="shortcut icon" href="../../assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
   <header id="cabecalho">
     <div class="container">
       <figure>
-        <a href="../index.html"><img height="150" width="150" src="../assets/img/logo.png" alt="Logo do site" /></a>
-        <figcaption>Logo do site - Arcade365</figcaption>
+        <a href="../../index.html">
+          <img height="200" width="300" src="../../assets/img/logoSemBG01.png" alt="Logo do site" />
+          <figcaption>Logo do site - Arcade365</figcaption>
+        </a>
       </figure>
       <nav class="menu">
         <ul>
           <li><a href="https://github.com/AndreWeberDev/projeto-arcade365"><strong>Github Do Projeto</strong></a></li>
-          <li><a href="./src/view/about.html"><strong>Sobre</strong></a></li>
-          <li><a href="./src/view/terms.html"><strong>Termos de Serviço</strong></a></li>
-          <li><a href="./src/view/politics.html"><strong>Política de Privacidade</strong></a></li>
-          <li><a href="./src/view/contato.html"><strong>Contato</strong></a></li>
+          <li><a href="./about.html"><strong>Sobre</strong></a></li>
+          <li><a href="./terms.html"><strong>Termos de Serviço</strong></a></li>
+          <li><a href="./politics.html"><strong>Política de Privacidade</strong></a></li>
+          <li><a href="./contato.html"><strong>Contato</strong></a></li>
         </ul>
       </nav>
-      <section class="title">
-        <h1>Arcade365 | Entre em Contato conosco!</h1>
-      </section>
     </div>
   </header>
 
   <main id="principal">
     <div class="container">
       <section class="form">
-        <form action="">
+        <h2 style="text-align: center; margin-bottom: 30px; color: #667eea;">Entre em Contato Conosco</h2>
+        <form id="contactForm">
           <div class="input-group">
             <label for="name">Nome:</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
           </div>
 
           <div class="input-group">
-            <label for="lastname">Sobrenome:</label>
-            <input type="text" name="lastname" id="lastname" />
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
           </div>
 
           <div class="input-group">
-            <label for="whatsapp">WhatsApp:</label>
+            <label for="whatsapp">WhatsApp (opcional):</label>
             <input type="tel" name="whatsapp" id="whatsapp" />
           </div>
 
           <div class="input-group">
             <label for="message">Mensagem:</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" id="message" required></textarea>
           </div>
+
+          <button type="submit" class="rating-button" style="width: 100%; padding: 14px; font-size: 16px;">Enviar Mensagem</button>
         </form>
       </section>
     </div>
   </main>
 
-  <!-- Colocar id no footer -->
   <footer id="rodape">
-    <div class="container">
-      <p>&copy; 2026 Rtech - Todos os direitos reservados.</p>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/AndreWeberDev/projeto-arcade365"><strong>Github Do Projeto</strong></a></li>
+        <li><a href="./about.html"><strong>Sobre</strong></a></li>
+        <li><a href="./terms.html"><strong>Termos de Serviço</strong></a></li>
+        <li><a href="./politics.html"><strong>Política</strong></a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Arcade365 - todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Obrigado pelo contato! Entraremos em contato em breve.');
+      this.reset();
+    });
+  </script>
 </body>
 
 </html>

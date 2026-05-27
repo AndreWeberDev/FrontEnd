@@ -304,6 +304,130 @@
           </tr>
         </table>
       </section>
+
+      <!-- Seção de Avaliações de Jogos -->
+      <section class="ratings-section">
+        <h2>⭐ Avalie os Jogos</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Clique em um jogo abaixo e deixe sua avaliação</p>
+        <div class="ratings-container">
+          <div class="rating-card">
+            <h3>Mario</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-mario">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('mario')">Enviar Avaliação</button>
+          </div>
+
+          <div class="rating-card">
+            <h3>Bloxorz</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-bloxorz">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('bloxorz')">Enviar Avaliação</button>
+          </div>
+
+          <div class="rating-card">
+            <h3>Fireboy & WaterGirl</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-fireboy">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('fireboy')">Enviar Avaliação</button>
+          </div>
+
+          <div class="rating-card">
+            <h3>Moto X3M</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-motox3m">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('motox3m')">Enviar Avaliação</button>
+          </div>
+
+          <div class="rating-card">
+            <h3>Xadrez</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-chess">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('chess')">Enviar Avaliação</button>
+          </div>
+
+          <div class="rating-card">
+            <h3>Simulador de Magnata</h3>
+            <div class="rating-stars">
+              <span class="star" data-value="1">⭐</span>
+              <span class="star" data-value="2">⭐</span>
+              <span class="star" data-value="3">⭐</span>
+              <span class="star" data-value="4">⭐</span>
+              <span class="star" data-value="5">⭐</span>
+            </div>
+            <p class="rating-comment" id="comment-idle">Clique para avaliar</p>
+            <button class="rating-button" onclick="submitRating('idle')">Enviar Avaliação</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de Recomendações de Novos Jogos -->
+      <section class="recommendations-section">
+        <h2>🎮 Recomende um Novo Jogo</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 30px;">Não encontrou o jogo que procura? Deixe uma sugestão para que adicionemos em breve!</p>
+        <div class="recommendations-form">
+          <form id="recommendationForm">
+            <div class="form-group">
+              <label for="gameName">Nome do Jogo:</label>
+              <input type="text" id="gameName" name="gameName" placeholder="Digite o nome do jogo" required>
+            </div>
+
+            <div class="form-group">
+              <label for="gameGenre">Gênero:</label>
+              <input type="text" id="gameGenre" name="gameGenre" placeholder="Ex: Ação, Puzzle, Esportes..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="gameLink">Link do Jogo (opcional):</label>
+              <input type="url" id="gameLink" name="gameLink" placeholder="Ex: https://example.com/game">
+            </div>
+
+            <div class="form-group">
+              <label for="gameDescription">Por que recomenda:</label>
+              <textarea id="gameDescription" name="gameDescription" placeholder="Conte-nos por que acha que esse jogo deveria estar no Arcade365..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="userName">Seu Nome (opcional):</label>
+              <input type="text" id="userName" name="userName" placeholder="Como você gostaria de ser creditado?">
+            </div>
+
+            <button type="submit" class="submit-button">Enviar Recomendação</button>
+          </form>
+          <div class="success-message" id="successMessage">
+            ✓ Obrigado pela recomendação! Analisaremos seu sugestão em breve!
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -323,6 +447,182 @@
       &copy; 2026 Arcade365 - todos os direitos reservados.
     </p>
   </footer>
-</body>
 
-</html>
+  <!-- Scripts de Avaliações e Recomendações -->
+  <script>
+    // Sistema de Avaliações
+    let currentRatings = {};
+    const ratingComments = {
+      1: 'Não gostei muito... 😞',
+      2: 'Poderia ser melhor 😐',
+      3: 'Bom jogo! 😊',
+      4: 'Muito bom! 😄',
+      5: 'Excelente jogo! 🤩'
+    };
+
+    document.querySelectorAll('.rating-stars').forEach(container => {
+      container.addEventListener('click', function(e) {
+        if (e.target.classList.contains('star')) {
+          const rating = parseInt(e.target.dataset.value);
+          const parent = e.target.closest('.rating-card');
+          const stars = parent.querySelectorAll('.star');
+          const gameId = parent.querySelector('.rating-comment').id.replace('comment-', '');
+
+          // Limpar avaliação anterior
+          stars.forEach(star => star.classList.remove('active'));
+
+          // Ativar estrelas até a selecionada
+          for (let i = 0; i < rating; i++) {
+            stars[i].classList.add('active');
+          }
+
+          // Salvar avaliação
+          currentRatings[gameId] = rating;
+
+          // Atualizar comentário
+          parent.querySelector('.rating-comment').textContent = ratingComments[rating];
+        }
+      });
+    });
+
+    // Função para submeter avaliação
+    function submitRating(gameId) {
+      if (!currentRatings[gameId]) {
+        alert('Por favor, selecione uma avaliação de estrelas!');
+        return;
+      }
+
+      const rating = currentRatings[gameId];
+      alert(`✓ Obrigado pela sua avaliação de ${rating} estrela${rating > 1 ? 's' : ''}! Sua opinião é muito importante para nós!`);
+      
+      // Limpar avaliação após envio
+      delete currentRatings[gameId];
+    }
+
+    // Sistema de Recomendações
+    document.getElementById('recommendationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const gameName = document.getElementById('gameName').value;
+      const gameGenre = document.getElementById('gameGenre').value;
+      const gameLink = document.getElementById('gameLink').value;
+      const gameDescription = document.getElementById('gameDescription').value;
+      const userName = document.getElementById('userName').value || 'Anônimo';
+
+      // Validação
+      if (!gameName || !gameGenre || !gameDescription) {
+        alert('Por favor, preencha todos os campos obrigatórios!');
+        return;
+      }
+
+      // Salvar dados (em um projeto real, seria enviado para um servidor)
+      const recommendation = {
+        game: gameName,
+        genre: gameGenre,
+        link: gameLink,
+        description: gameDescription,
+        user: userName,
+        date: new Date().toLocaleDateString('pt-BR')
+      };
+
+      // Simular salvar e mostrar mensagem de sucesso
+      console.log('Recomendação recebida:', recommendation);
+
+      // Mostrar mensagem de sucesso
+      const successMessage = document.getElementById('successMessage');
+      successMessage.style.display = 'block';
+
+      // Limpar formulário
+      this.reset();
+
+      // Esconder mensagem após 5 segundos
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+  
+  <!-- Easter Egg - Animação de Emojis Caindo em Landscape -->
+  <style>
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes bounce-in {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .falling-emoji {
+      position: fixed;
+      top: -60px;
+      font-size: 48px;
+      user-select: none;
+      pointer-events: none;
+      z-index: 9999;
+      animation: bounce-in 0.3s ease-out, fall 3s ease-in forwards;
+    }
+
+    @media (max-height: 500px) {
+      .falling-emoji {
+        font-size: 36px;
+      }
+    }
+  </style>
+
+  <script>
+    // Easter Egg: Emojis caindo quando vira para landscape
+    function createFallingEmojis() {
+      const emojis = ['🎮', '🕹️', '👾', '🎯', '🏆', '⭐', '🎪', '🎭', '🎨', '🎬'];
+      const screenWidth = window.innerWidth;
+      
+      // Criar 15-20 emojis caindo
+      const emojiCount = Math.random() * 5 + 15;
+      
+      for (let i = 0; i < emojiCount; i++) {
+        setTimeout(() => {
+          const emoji = document.createElement('div');
+          emoji.className = 'falling-emoji';
+          emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          emoji.style.left = Math.random() * screenWidth + 'px';
+          emoji.style.animationDelay = Math.random() * 0.5 + 's';
+          document.body.appendChild(emoji);
+          
+          // Remover o emoji após a animação
+          setTimeout(() => {
+            emoji.remove();
+          }, 3500);
+        }, i * 100);
+      }
+    }
+
+    // Detectar mudança de orientação
+    window.addEventListener('orientationchange', function() {
+      if (window.innerHeight < window.innerWidth) {
+        // Landscape mode
+        createFallingEmojis();
+      }
+    });
+
+    // Também detectar redimensionamento (para tablets)
+    let lastHeight = window.innerHeight;
+    window.addEventListener('resize', function() {
+      if (window.innerHeight < window.innerWidth && lastHeight >= window.innerWidth) {
+        // Mudança para landscape
+        createFallingEmojis();
+      }
+      lastHeight = window.innerHeight;
+    });
+  </script>
