@@ -2,6 +2,16 @@
 // Busca `upcomingGames` de um JSON e renderiza os blocos.
 let _upcomingGames = [];
 
+const UPCOMING_IMAGE_SET = [
+  './assets/img/gaming.webp',
+  './assets/img/gaming2.webp',
+  './assets/img/gaming3.webp'
+];
+
+function getUpcomingImage(index) {
+  return UPCOMING_IMAGE_SET[index % UPCOMING_IMAGE_SET.length];
+}
+
 async function fetchUpcomingGames() {
   try {
     // Primeiro tenta carregar da API (quando o servidor estiver rodando)
@@ -25,6 +35,7 @@ function renderGames(list) {
 
   list.forEach((g, idx) => {
     const isLink = g.link && g.link.trim() !== '';
+    const imageSrc = getUpcomingImage(idx);
 
     if (isLink) {
       const a = document.createElement('a');
@@ -32,47 +43,59 @@ function renderGames(list) {
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
 
-      const inner = document.createElement('div');
-      inner.className = 'jogo';
+      const inner = document.createElement('article');
+      inner.className = 'jogo jogo-em-breve';
       inner.classList.add(idx % 2 === 0 ? 'path-left' : 'path-right');
 
       const img = document.createElement('img');
-      img.src = g.img || './assets/img/example.png';
-      img.alt = g.name || '';
-      img.width = 120; img.height = 120;
+      img.src = imageSrc;
+      img.alt = g.name || 'Jogo em breve';
+      img.width = 120;
+      img.height = 120;
+
+      const badge = document.createElement('span');
+      badge.className = 'jogo-badge';
+      badge.textContent = 'Em breve';
 
       const title = document.createElement('div');
+      title.className = 'jogo-title';
       title.textContent = g.name || 'Em Breve';
-      title.style.marginTop = '10px';
-      title.style.fontWeight = '700';
 
       const subtitle = document.createElement('div');
       subtitle.className = 'jogo-breve-subtitle';
-      subtitle.textContent = g.subtitle || '';
+      subtitle.textContent = g.subtitle || 'Novo lançamento chegando ao Arcade365.';
 
       inner.appendChild(img);
+      inner.appendChild(badge);
       inner.appendChild(title);
       inner.appendChild(subtitle);
       a.appendChild(inner);
       container.appendChild(a);
     } else {
-      const div = document.createElement('div');
-      div.className = 'jogo-breve';
+      const div = document.createElement('article');
+      div.className = 'jogo jogo-em-breve';
       div.classList.add(idx % 2 === 0 ? 'path-left' : 'path-right');
 
-      const icon = document.createElement('div');
-      icon.className = 'jogo-breve-text';
-      icon.textContent = '🎮';
+      const img = document.createElement('img');
+      img.src = imageSrc;
+      img.alt = g.name || 'Jogo em breve';
+      img.width = 120;
+      img.height = 120;
+
+      const badge = document.createElement('span');
+      badge.className = 'jogo-badge';
+      badge.textContent = 'Em breve';
 
       const title = document.createElement('div');
-      title.className = 'jogo-breve-text';
+      title.className = 'jogo-title';
       title.textContent = g.name || 'Em Breve';
 
       const subtitle = document.createElement('div');
       subtitle.className = 'jogo-breve-subtitle';
-      subtitle.textContent = g.subtitle || '';
+      subtitle.textContent = g.subtitle || 'Novo lançamento chegando ao Arcade365.';
 
-      div.appendChild(icon);
+      div.appendChild(img);
+      div.appendChild(badge);
       div.appendChild(title);
       div.appendChild(subtitle);
       container.appendChild(div);

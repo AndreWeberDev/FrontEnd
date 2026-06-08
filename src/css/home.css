@@ -157,10 +157,12 @@ body {
 }
 
 /* Jogo em Breve */
-.jogo-breve {
+.jogo-breve,
+.jogo-em-breve {
   background: linear-gradient(135deg, #424242 0%, #2d2d2d 100%);
-  border: 2px dashed #667eea;
-  color: #999;
+  border: 2px solid rgba(102, 126, 234, 0.45);
+  color: #f4f4f4;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 .jogo-breve-text {
@@ -170,10 +172,33 @@ body {
   text-align: center;
 }
 
+.jogo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(102, 126, 234, 0.18);
+  border: 1px solid rgba(102, 126, 234, 0.35);
+  color: #dfe5ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.jogo-title {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
 .jogo-breve-subtitle {
   font-size: 12px;
-  color: #777;
-  margin-top: 10px;
+  color: #c8c8c8;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 /* Efeito "caminho meio andando" (zigzag alternado) */
