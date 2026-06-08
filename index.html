@@ -19,34 +19,6 @@
 <body>
   <header id="cabecalho">
     <div class="container">
-      <!-- Área de Autenticação -->
-      <div id="auth-area" style="margin-bottom:20px; display:flex; gap:20px; align-items:center; justify-content:flex-end;">
-        <div id="login-box">
-          <form id="login-form" style="display:flex; gap:8px; align-items:center;">
-            <input id="login-username" placeholder="Usuário" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;" required>
-            <input id="login-password" type="password" placeholder="Senha" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;" required>
-            <button type="submit" style="padding:6px 10px; border-radius:6px; background:#667eea; border:none; color:#fff;">Entrar</button>
-          </form>
-        </div>
-        <div id="user-box" style="display:none; gap:8px; align-items:center;">
-          <span>Olá, <strong id="user-name"></strong></span>
-          <button id="logout-btn" style="padding:6px 10px; border-radius:6px; background:#e66; border:none; color:#fff;">Sair</button>
-        </div>
-      </div>
-
-      <!-- Painel admin: visível somente para administradores -->
-      <div id="admin-panel" style="display:none; margin-bottom:20px; background:rgba(255,255,255,0.03); padding:12px; border-radius:8px; border:1px solid rgba(102,126,234,0.12);">
-        <h3 style="margin:0 0 8px 0;">Painel Admin - Adicionar Jogo</h3>
-        <form id="add-game-form" style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-          <input id="new-game-name" placeholder="Nome do jogo" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;" required>
-          <input id="new-game-link" placeholder="Link (opcional)" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;">
-          <input id="new-game-img" placeholder="Imagem (opcional)" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;">
-          <input id="new-game-subtitle" placeholder="Subtítulo" style="padding:6px; border-radius:6px; border:1px solid #444; background:#111; color:#fff;">
-          <button type="submit" style="padding:6px 10px; border-radius:6px; background:#4caf50; border:none; color:#fff;">Adicionar</button>
-          <button id="download-games" style="padding:6px 10px; border-radius:6px; background:#2196f3; border:none; color:#fff;">Baixar JSON</button>
-        </form>
-        <div style="font-size:12px; color:#bbb; margin-top:8px;">Ao baixar o JSON você pode substituir o arquivo <em>src/data/upcomingGames.json</em> no repositório para persistência.</div>
-      </div>
       <figure>
         <a href="./index.html">
           <img height="150" width="300" src="./assets/img/logoSemBG01.png" alt="Logo do Site">
@@ -97,7 +69,6 @@
         <!-- Blocos em Breve (gerados dinamicamente) -->
         <div id="dynamic-games"></div>
 
-        <script src="./src/js/auth.js"></script>
         <script src="./src/js/games.js"></script>
       </section>
       <section class="cards-highlights">

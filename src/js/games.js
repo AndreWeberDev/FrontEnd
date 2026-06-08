@@ -8,8 +8,8 @@ const UPCOMING_IMAGE_SET = [
   './assets/img/gaming3.webp'
 ];
 
-function getUpcomingImage(index) {
-  return UPCOMING_IMAGE_SET[index % UPCOMING_IMAGE_SET.length];
+function getUpcomingImage(index, entry) {
+  return entry?.img?.trim() || UPCOMING_IMAGE_SET[index % UPCOMING_IMAGE_SET.length];
 }
 
 async function fetchUpcomingGames() {
@@ -35,7 +35,7 @@ function renderGames(list) {
 
   list.forEach((g, idx) => {
     const isLink = g.link && g.link.trim() !== '';
-    const imageSrc = getUpcomingImage(idx);
+    const imageSrc = getUpcomingImage(idx, g);
 
     if (isLink) {
       const a = document.createElement('a');
@@ -107,26 +107,6 @@ async function addGames() {
   _upcomingGames = await fetchUpcomingGames();
   renderGames(_upcomingGames);
 }
-
-function addGameEntry(entry) {
-  _upcomingGames.push(entry);
-  renderGames(_upcomingGames);
-}
-
-function downloadUpdatedGames() {
-  const dataStr = JSON.stringify(_upcomingGames, null, 2);
-  const blob = new Blob([dataStr], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'upcomingGames.json';
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-window.addGames = addGames;
-window.addGameEntry = addGameEntry;
-window.downloadUpdatedGames = downloadUpdatedGames;
 
 document.addEventListener('DOMContentLoaded', function(){
   addGames();
